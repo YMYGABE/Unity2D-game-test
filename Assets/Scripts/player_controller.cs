@@ -43,7 +43,6 @@ public class player_controller : MonoBehaviour
         rdb2.velocity = vector;  //设置刚体的速度
         bool RUN = Mathf.Abs(rdb2.velocity.x) > 0;
         anim.SetBool("run", RUN);  //动作切换，这里来改变引擎里设置的bool变量。
-       
     }
 
     void Trun()

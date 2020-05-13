@@ -4,17 +4,58 @@ using UnityEngine;
 
 public class EnemyEagle : Enemy
 {
-   
+    public float speed;
+    public float startwaittime;
+    private float waittime;
+
+    public Transform moveto;
+    public Transform leftDown;
+    public Transform rightUp;
     // Start is called before the first frame update
     void Start()
     {
         base.Start();
+        waittime = startwaittime;
+        moveto.position = GetRandomPosition();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Trun();
         base.Update();
+        transform.position = Vector2.MoveTowards(transform.position, moveto.position, speed * Time.deltaTime);
+
+        if (Vector2.Distance(transform.position,moveto.position) < 0.1f) 
+        {
+            if(waittime <= 0)
+            {
+                moveto.position = GetRandomPosition();
+                waittime = startwaittime;
+            }
+            else
+            {
+                waittime--;
+            }
+        }
+
+
+
     }
-    
+    Vector2 GetRandomPosition()
+    {
+        Vector2 vectorPo = new Vector2(Random.Range(leftDown.position.x, rightUp.position.x), Random.Range(leftDown.position.y, rightUp.position.y));
+        return vectorPo;
+    }
+    void Trun()
+    {
+        if(transform.position.x < moveto.position.x)
+        {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
+        if(transform.position.x > moveto.position.x)
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+    }
 }
