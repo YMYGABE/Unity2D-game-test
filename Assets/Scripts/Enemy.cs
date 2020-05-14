@@ -8,6 +8,7 @@ public abstract class Enemy : MonoBehaviour
     public int health;
     public float flashtime;
 
+    public GameObject bloodEffect;
     private SpriteRenderer spriteRenderer;
     private Color oldcolor;
     // Start is called before the first frame update
@@ -31,6 +32,7 @@ public abstract class Enemy : MonoBehaviour
     {
         health -= damage;
         getAttack(flashtime);
+        Instantiate(bloodEffect, transform.position, Quaternion.identity);
     }
     void getAttack(float time)
     {
