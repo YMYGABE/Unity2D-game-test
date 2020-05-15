@@ -6,16 +6,26 @@ public class FarAttack : MonoBehaviour
 {
     public GameObject gameObject;
     public Transform shotPoint;
-    
+
+    public float StartTime;
+    public float NextTime;
     public int damage;
     // Update is called once per frame
    public void Update()
     {
-        if (Input.GetButtonDown("FarAttack"))
-        {
-            Instantiate(gameObject, shotPoint.position, Quaternion.identity);
-
+        
+            if(NextTime <= 0) {
+            if (Input.GetButtonDown("FarAttack"))
+            {
+                Instantiate(gameObject, shotPoint.position, transform.rotation);
+                NextTime = StartTime;
+            }
         }
+            else
+            {
+                NextTime -= Time.deltaTime;
+            }
+        
     }
     
 }

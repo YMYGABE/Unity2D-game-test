@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 2596340235885918967}
   - component: {fileID: 2596340235885918954}
   - component: {fileID: 2596340235885918955}
+  - component: {fileID: 3751272791959805890}
   m_Layer: 0
   m_Name: Enemyeagle
   m_TagString: Enemy
@@ -223,6 +224,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23037195, y: 0.19619802}
   m_EdgeRadius: 0
+--- !u!50 &3751272791959805890
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2596340235885918966}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2596340236029948651
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8385533558750854663}
   - component: {fileID: 7521459325231318574}
   - component: {fileID: 1766586343724644074}
+  - component: {fileID: 1745176532690969060}
+  - component: {fileID: -996188832260049435}
   m_Layer: 0
   m_Name: farStart
   m_TagString: Untagged
@@ -119,3 +121,65 @@ MonoBehaviour:
   EndlifeTime: 0.2
   destroyattack: {fileID: 2299023608378201240, guid: 9594dcafcc3e395408206a8d810456b8,
     type: 3}
+--- !u!60 &1745176532690969060
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936892945556352669}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.4, y: 0.41}
+    newSize: {x: 0.4, y: 0.41}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.004250964, y: 0.0885742}
+      - {x: -0.012233727, y: 0.07120577}
+      - {x: -0.073041975, y: 0.02200389}
+      - {x: -0.08782518, y: -0.007608398}
+      - {x: -0.0692678, y: -0.026450198}
+      - {x: -0.04564072, y: -0.046553608}
+      - {x: -0.02133197, y: -0.070790835}
+      - {x: -0.0050722715, y: -0.09693162}
+      - {x: 0.027680658, y: -0.06968455}
+      - {x: 0.06413637, y: -0.040940497}
+      - {x: 0.07609095, y: -0.023475185}
+      - {x: 0.07712661, y: -0.012124721}
+      - {x: 0.091931626, y: -0.0025361376}
+      - {x: 0.08700389, y: 0.0151445195}
+      - {x: 0.04250661, y: 0.05162659}
+      - {x: 0.012076162, y: 0.08611034}
+--- !u!50 &-996188832260049435
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936892945556352669}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

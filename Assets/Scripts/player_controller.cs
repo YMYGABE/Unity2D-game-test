@@ -57,6 +57,7 @@ public class player_controller : MonoBehaviour
             if(rdb2.velocity.x < -0.1f)
             {
                 transform.localRotation = Quaternion.Euler(0, 180, 0);  //翻转180 （x,y,z）
+                
             }
         }
     }

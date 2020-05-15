@@ -18,11 +18,33 @@ public class FarAttackItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(transform.right * Time.deltaTime*speed);
+       if(transform.eulerAngles.y == 0)
+        {
+            transform.Translate(transform.right * Time.deltaTime * speed);
+        }
+       else if(transform.eulerAngles.y == 180)
+        {
+            transform.Translate(-transform.right * Time.deltaTime * speed);
+        }
+       
+        
     }
     void DestroyAttack()
     {
-        Instantiate(destroyattack, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        Instantiate(destroyattack, transform.position, Quaternion.identity);
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            DestroyAttack();
+        }
+        else if (other.gameObject.CompareTag("Building") || other.gameObject.CompareTag("Ground"))
+        {
+            DestroyAttack();
+        }
     }
 }
