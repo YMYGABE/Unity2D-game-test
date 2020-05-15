@@ -63,16 +63,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\BloodEffect.cs" />
-    <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\EnemyEagle.cs" />
-    <Compile Include="Assets\Scripts\FarAttack.cs" />
-    <Compile Include="Assets\Scripts\FarAttackItem.cs" />
-    <Compile Include="Assets\Scripts\destroyFarEnd.cs" />
-    <Compile Include="Assets\Scripts\move.cs" />
-    <Compile Include="Assets\Scripts\player_attack.cs" />
-    <Compile Include="Assets\Scripts\player_controller.cs" />
+    <Compile Include="Assets\Scripts\Camera_script\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Camera_script\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\Camera_script\GameCamera.cs" />
+    <Compile Include="Assets\Scripts\Enemy_script\BloodEffect.cs" />
+    <Compile Include="Assets\Scripts\Enemy_script\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy_script\EnemyEagle.cs" />
+    <Compile Include="Assets\Scripts\Fox_script\FarAttack.cs" />
+    <Compile Include="Assets\Scripts\Fox_script\FarAttackItem.cs" />
+    <Compile Include="Assets\Scripts\Fox_script\destroyFarEnd.cs" />
+    <Compile Include="Assets\Scripts\Fox_script\move.cs" />
+    <Compile Include="Assets\Scripts\Fox_script\player_attack.cs" />
+    <Compile Include="Assets\Scripts\Fox_script\player_controller.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/MyGameMaker/2dgame_1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
