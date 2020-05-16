@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Enemy_script\EnemyEagle.cs" />
     <Compile Include="Assets\Scripts\Fox_script\FarAttack.cs" />
     <Compile Include="Assets\Scripts\Fox_script\FarAttackItem.cs" />
+    <Compile Include="Assets\Scripts\Fox_script\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Fox_script\destroyFarEnd.cs" />
     <Compile Include="Assets\Scripts\Fox_script\move.cs" />
     <Compile Include="Assets\Scripts\Fox_script\player_attack.cs" />

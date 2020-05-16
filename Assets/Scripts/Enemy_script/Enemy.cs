@@ -11,9 +11,11 @@ public abstract class Enemy : MonoBehaviour
     public GameObject bloodEffect;
     private SpriteRenderer spriteRenderer;
     private Color oldcolor;
+    private PlayerHealth playerhealth;
     // Start is called before the first frame update
     public void Start()
     {
+        playerhealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         oldcolor = spriteRenderer.color;
     }
@@ -42,5 +44,16 @@ public abstract class Enemy : MonoBehaviour
     void backColor()
     {
         spriteRenderer.color = oldcolor;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       
+        if (collision.gameObject.CompareTag("Player") && collision.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
+        {
+            if (playerhealth != null)
+            {
+                playerhealth.DamagePlayer(damage);
+            }
+        }
     }
 }
