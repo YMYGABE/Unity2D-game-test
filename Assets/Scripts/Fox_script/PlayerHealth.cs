@@ -9,11 +9,13 @@ public class PlayerHealth : MonoBehaviour
     public float time;
 
     public CapsuleCollider2D capsule;
+    public BoxCollider2D box; 
     // Start is called before the first frame update
     void Start()
     {
         animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         capsule = GetComponent<CapsuleCollider2D>();
+        box = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
         {
             animator.SetBool("death", true);
             capsule.enabled = false;
+            box.enabled = false;
             Destroy(gameObject,time);
         }
     }

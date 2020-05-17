@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Bush_script\BushGetPlayer.cs" />
+    <Compile Include="Assets\Scripts\Bush_script\Text.cs" />
     <Compile Include="Assets\Scripts\Camera_script\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Camera_script\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Camera_script\GameCamera.cs" />

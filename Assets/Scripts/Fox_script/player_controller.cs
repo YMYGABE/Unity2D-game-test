@@ -120,5 +120,13 @@ public class player_controller : MonoBehaviour
             }
         }
     }
-   
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bush"))
+        {
+            anim.SetTrigger("crouch");
+        }
+    }
+    
 }

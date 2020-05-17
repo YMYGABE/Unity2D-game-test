@@ -8,6 +8,7 @@ TagManager:
   - Building
   - Ground
   - ShakeCamera
+  - Bush
   layers:
   - Default
   - TransparentFX
