@@ -5,6 +5,7 @@ using UnityEngine;
 public class BushGetPlayer : MonoBehaviour
 {
     public SpriteRenderer bush;
+    
     public Color BushColor;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,10 @@ public class BushGetPlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            bush.color = new Color(255, 255, 255, 0.5f);
+            
+                bush.color = new Color(255, 255, 255, 0.5f);
+                bush.sortingOrder = 2;
+           
         }
         
     }

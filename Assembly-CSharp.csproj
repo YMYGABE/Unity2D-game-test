@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Fox_script\move.cs" />
     <Compile Include="Assets\Scripts\Fox_script\player_attack.cs" />
     <Compile Include="Assets\Scripts\Fox_script\player_controller.cs" />
+    <Compile Include="Assets\Scripts\gitf_script\cherry.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/MyGameMaker/2dgame_1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

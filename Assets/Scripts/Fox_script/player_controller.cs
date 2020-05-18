@@ -8,6 +8,7 @@ public class player_controller : MonoBehaviour
     public float jumpspeed;
     public float doublejump;
 
+    public bool cansee = true;
     private bool isGround;
     private bool candoubleJump;
     private Rigidbody2D rdb2;
@@ -123,10 +124,22 @@ public class player_controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
+            if (collision.gameObject.CompareTag("Bush"))
+            {
+                anim.SetBool("crouch", true);
+                cansee = false;
+            }
+     
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
         if (collision.gameObject.CompareTag("Bush"))
         {
-            anim.SetTrigger("crouch");
+
+            anim.SetBool("crouch", false);
+            cansee = true;
         }
     }
-    
+
 }

@@ -8,6 +8,7 @@ public class EnemyEagle : Enemy
     public float startwaittime;
     private float waittime;
     public PlayerHealth playerHealth;
+    public player_controller controller;
 
     public Transform Player;
     public Transform moveto;
@@ -20,6 +21,7 @@ public class EnemyEagle : Enemy
         waittime = startwaittime;
         moveto.position = GetRandomPosition();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        controller = GameObject.FindGameObjectWithTag("Player").GetComponent<player_controller>();
     }
 
     // Update is called once per frame
@@ -44,7 +46,10 @@ public class EnemyEagle : Enemy
         if(Player != null) {
             if (Vector2.Distance(transform.position, Player.position) < 5.0f && playerHealth.health != 0)
             {
-                moveto.position = Player.position;
+                if (controller.cansee)
+                {
+                    moveto.position = Player.position;
+                }
             }
         }
         
