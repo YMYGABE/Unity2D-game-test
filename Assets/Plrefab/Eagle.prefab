@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6410082754240000767}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Eagle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,6 +194,9 @@ MonoBehaviour:
     type: 3}
   speed: 2
   startwaittime: 1
+  playerHealth: {fileID: 0}
+  controller: {fileID: 0}
+  Player: {fileID: 0}
   moveto: {fileID: 2596340236248788360}
   leftDown: {fileID: 2596340235430667940}
   rightUp: {fileID: 2596340236029948648}

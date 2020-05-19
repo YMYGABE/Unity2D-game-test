@@ -28,9 +28,7 @@ public abstract class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-        }
-       
-
+        }       
     }
     public void TakeDamage(int damage)
     {

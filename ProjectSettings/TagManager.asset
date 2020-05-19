@@ -19,8 +19,8 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -45,4 +45,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 593918893
+    locked: 0
+  - name: Ground
+    uniqueID: 497226047
+    locked: 0
+  - name: Enemy
+    uniqueID: 4098946347
+    locked: 0
+  - name: Player
+    uniqueID: 524929161
+    locked: 0
+  - name: Caver
+    uniqueID: 4238379045
     locked: 0
