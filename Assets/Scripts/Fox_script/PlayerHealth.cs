@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float health;
+    public int health;
     public Animator animator;
     public float time;
     public int numblink;
@@ -17,10 +17,13 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Fox_Health.HealthMax = health;
+        Fox_Health.HealthCurrent = health;
         animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         capsule = GetComponent<CapsuleCollider2D>();
         box = GetComponent<BoxCollider2D>();
         renderer = GetComponent<Renderer>();
+       
     }
 
     // Update is called once per frame
@@ -31,8 +34,10 @@ public class PlayerHealth : MonoBehaviour
     public void DamagePlayer(int damage)
     {
         health -= damage;
+        Fox_Health.HealthCurrent = health;
         if(health <= 0.0f)
         {
+            Fox_Health.HealthCurrent = 0;
             animator.SetBool("death", true);
             capsule.enabled = false;
             box.enabled = false;

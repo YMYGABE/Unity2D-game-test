@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Text : MonoBehaviour
+public class BushText : MonoBehaviour
 {
     public GameObject Textobject;
     // Start is called before the first frame update
@@ -30,6 +30,6 @@ public class Text : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
