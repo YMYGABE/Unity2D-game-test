@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public float time;
     public int numblink;
     public float blinktime;
-
+    public ScreenFlash flash;
 
     public Renderer renderer;
     public CapsuleCollider2D capsule;
@@ -20,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
         Fox_Health.HealthMax = health;
         Fox_Health.HealthCurrent = health;
         animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+        flash = GameObject.FindGameObjectWithTag("ScreenFlash").GetComponent<ScreenFlash>();
         capsule = GetComponent<CapsuleCollider2D>();
         box = GetComponent<BoxCollider2D>();
         renderer = GetComponent<Renderer>();
@@ -33,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void DamagePlayer(int damage)
     {
+        flash.FlashScreen();
         health -= damage;
         Fox_Health.HealthCurrent = health;
         if(health <= 0.0f)

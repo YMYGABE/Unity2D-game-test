@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - ShakeCamera
   - Bush
+  - ScreenFlash
   layers:
   - Default
   - TransparentFX

@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Fox_script\FarAttackItem.cs" />
     <Compile Include="Assets\Scripts\Fox_script\Fox_Health.cs" />
     <Compile Include="Assets\Scripts\Fox_script\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Fox_script\ScreenFlash.cs" />
     <Compile Include="Assets\Scripts\Fox_script\destroyFarEnd.cs" />
     <Compile Include="Assets\Scripts\Fox_script\move.cs" />
     <Compile Include="Assets\Scripts\Fox_script\player_attack.cs" />
