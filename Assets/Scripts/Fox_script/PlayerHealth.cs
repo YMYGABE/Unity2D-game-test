@@ -46,7 +46,17 @@ public class PlayerHealth : MonoBehaviour
             box.enabled = false;
             Destroy(gameObject,time);
         }
+        
         Playerblink(numblink, blinktime);
+    }
+    public void BackHealth(int food)
+    {
+        health += food;
+        Fox_Health.HealthCurrent = health;
+        if (health > 10)
+        {
+            Fox_Health.HealthCurrent = 10;
+        }
     }
 
      void Playerblink(int blinks,float time)

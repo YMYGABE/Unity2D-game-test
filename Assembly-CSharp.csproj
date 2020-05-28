@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Enemy_script\BloodEffect.cs" />
     <Compile Include="Assets\Scripts\Enemy_script\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy_script\EnemyEagle.cs" />
+    <Compile Include="Assets\Scripts\Enemy_script\Trap.cs" />
     <Compile Include="Assets\Scripts\Fox_script\FarAttack.cs" />
     <Compile Include="Assets\Scripts\Fox_script\FarAttackItem.cs" />
     <Compile Include="Assets\Scripts\Fox_script\Fox_Health.cs" />

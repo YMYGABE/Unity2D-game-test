@@ -6,10 +6,12 @@ public class cherry : MonoBehaviour
 {
     public Animator cherry_item;
     public float time;
+    public int food;
+    public PlayerHealth phealth;
     // Start is called before the first frame update
     void Start()
     {
-        
+        phealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         cherry_item = GetComponent<Animator>();
     }
 
@@ -22,9 +24,9 @@ public class cherry : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Fox_Health.HealthCurrent += 4;
+            phealth.BackHealth(food);
             cherry_item.SetTrigger("dis");
-            Destroy(gameObject,time);
+            Destroy(gameObject);
 
         }
     }
