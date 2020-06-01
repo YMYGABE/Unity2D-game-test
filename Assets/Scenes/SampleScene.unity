@@ -594,6 +594,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 327211959}
   phealth: {fileID: 0}
+  capsule: {fileID: 327211961}
+  times: 1
+  damage: 1
 --- !u!66 &327211961
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -3161,6 +3164,7 @@ GameObject:
   - component: {fileID: 1400171705}
   - component: {fileID: 1400171709}
   - component: {fileID: 1400171710}
+  - component: {fileID: 1400171711}
   m_Layer: 9
   m_Name: player-idle-1
   m_TagString: Player
@@ -3371,6 +3375,32 @@ MonoBehaviour:
   renderer: {fileID: 0}
   capsule: {fileID: 0}
   box: {fileID: 0}
+--- !u!61 &1400171711
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400171701}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015144758, y: -0.049452886}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.33, y: 0.32}
+    newSize: {x: 0.33, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.18211626, y: 0.22109422}
+  m_EdgeRadius: 0
 --- !u!1 &1486168691 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6704366734401154474, guid: 954822756f316ba408d4337ff9ca2d55,
