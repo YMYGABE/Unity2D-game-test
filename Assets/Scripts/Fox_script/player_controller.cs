@@ -34,7 +34,8 @@ public class player_controller : MonoBehaviour
     }
     void checkGround()
     {
-        isGround = myfeet.IsTouchingLayers(LayerMask.GetMask("Ground"));//获取是否接触图层Ground 
+        isGround = myfeet.IsTouchingLayers(LayerMask.GetMask("Ground")) ||
+                   myfeet.IsTouchingLayers(LayerMask.GetMask("moveground")); //否接触图层Ground 
        // Debug.Log(isGround);
     }
     void Move()

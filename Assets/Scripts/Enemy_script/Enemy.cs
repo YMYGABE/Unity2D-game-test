@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public abstract class Enemy : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public abstract class Enemy : MonoBehaviour
     private SpriteRenderer spriteRenderer;   //精灵渲染器
     private Color oldcolor;         //受伤以前的颜色
     private PlayerHealth playerhealth;          //Player的方法引用
+    public GameObject gift_1;
+    
     // Start is called before the first frame update
     public void Start()
     {
@@ -19,6 +22,7 @@ public abstract class Enemy : MonoBehaviour
         playerhealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();                                                                                          
         spriteRenderer = GetComponent<SpriteRenderer>();
         oldcolor = spriteRenderer.color;//获取受伤之前的颜色
+       
     }
 
     // Update is called once per frame
@@ -27,14 +31,21 @@ public abstract class Enemy : MonoBehaviour
         //敌人生命值为 0 销毁对象
         if (health <= 0)
         {
-            Destroy(gameObject);
+           
         }       
     }
+
     public void TakeDamage(int damage)
     {
         //受到攻击后
         health -= damage;
         getAttack(flashtime);
+        if(health == 0)
+        {
+            Instantiate(gift_1, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+           
+        }
         //实例化溅血特效到敌人的位置
         Instantiate(bloodEffect, transform.position, Quaternion.identity);
     }

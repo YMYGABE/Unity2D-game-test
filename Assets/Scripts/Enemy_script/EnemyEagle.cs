@@ -9,6 +9,7 @@ public class EnemyEagle : Enemy
     private float waittime;
     public PlayerHealth playerHealth;
     public player_controller controller;
+    
 
     public Transform Player;
     public Transform moveto;
