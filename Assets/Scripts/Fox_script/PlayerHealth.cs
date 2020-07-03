@@ -55,8 +55,8 @@ public class PlayerHealth : MonoBehaviour
         Fox_Health.HealthCurrent = health;
         if (health >= 10)
         {
-            Debug.Log("1");
-            Fox_Health.HealthCurrent = 10;
+            health = 10;
+            Fox_Health.HealthCurrent = health;
         }
     }
 
